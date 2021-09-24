@@ -10,6 +10,8 @@ def get_price_general(target_estate: RealEstate,
                 reform_mean_year_building_1000_coeff = 0,
                 total_square_coeff = 0,
                 multiply_square = False):
+    # if neighbor_estate.row["day"] > target_estate.row["day"]:
+    #     return 0
     if distance > max_distance:
         return 0
     square_frac = neighbor_estate.row["total_square"] / target_estate.row["total_square"]
@@ -36,6 +38,9 @@ def get_square_general(target_estate: RealEstate,
                 diff = False,
                 frac=False
                 ):
+    # if neighbor_estate.row["day"] > target_estate.row["day"]:
+    #     return 0
+
     if distance > max_distance:
         return 0
 
@@ -54,6 +59,9 @@ def get_catering_points_general(target_estate: RealEstate,
                 distance: float,
                 max_distance = 10,
                 ):
+
+    # if neighbor_estate.row["day"] > target_estate.row["day"]:
+    #     return 0
     if distance > max_distance:
         return 0
 
